@@ -1,4 +1,4 @@
-************************************MERN-PROJECT:TODO LIST************************************
+**************************************************MERN-PROJECT:TODO LIST**************************************************
 
 A simple TODO-LIST created using MongoDB,ExpressJS,NodeJS,React
 
