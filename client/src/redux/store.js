@@ -4,9 +4,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import thunk from 'redux-thunk';
 import { todosReducers } from './reducer/todosReducer';
+import { tabReducer } from './reducer/tabReducer';
 
 const reducer = combineReducers({
-    todos: todosReducers
+    todos: todosReducers,
+    currentTab: tabReducer
 })
 
 const middleware = [thunk];

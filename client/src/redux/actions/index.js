@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {  ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO } from './type';
+import {  ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, UPDATE_TODO, DELETE_TODO, TOGGLE_TAB } from './type';
 
 const API_URL='http://localhost:8000';
 
@@ -46,9 +46,23 @@ export const updateTodo = (id,data) => async(dispatch) => {
  
         dispatch({ type: UPDATE_TODO , payload: res.data });
      } catch (error){
-         console.log(`error while calling getAllTodos API`,error.message);
+         console.log(`error while calling updateTodo API`,error.message);
      }
 }
 
+export const deleteTodo = (id) => async(dispatch) => {
+    
+    try{ 
+        const res = await axios.delete(`${API_URL}/todos/${id}`);
+ 
+        dispatch({ type: DELETE_TODO , payload: res.data });
+     } catch (error){
+         console.log(`error while calling deleteTodo API`,error.message);
+     }
+}
+
+export const toggleTab = (tab) => async (dispatch) => {
+    dispatch({type: TOGGLE_TAB,selected :tab})
+}
 //https://facebook.com/home : home is the endpoint
 //we have to mention an endpoint in the post function

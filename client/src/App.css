@@ -8,7 +8,7 @@ header{
 header h1{
   font-size:100px;
   color:#2c2d50;
-  font-weight:100px;
+  font-weight:30px;
 }
 input{
   font-size:20px;
@@ -49,4 +49,29 @@ article{
   background-color: transparent;
   border:none;
   border-bottom: 1px solid #ffffff;
+}
+
+.button{
+  margin: 0 10px;
+  padding: 10px;
+  font:14px;
+  color: #776767;
+  background-color: #bed9e070;
+  border:none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.button.selected{
+  color:#ffffff;
+  background-color: #6c6777;
+}
+
+.button.clear{
+  float:right;
+  color:#ffffff;
+  background-color:black;
+  width:170px;
 }
