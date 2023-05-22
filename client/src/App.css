@@ -19,3 +19,16 @@ input{
   border-bottom:1px solid black;
   padding:5px;
 }
+
+.task{
+  background-color: #34495e;
+  padding: 10px;
+  margin:6px;
+  overflow-x: hidden;
+  border-radius: 6px;
+  cursor:pointer;
+}
+
+.task span{
+  color:#FFFF;
+}

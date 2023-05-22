@@ -1,8 +1,20 @@
 
 
-const Todo = () => {
+
+const Todo = ({todo}) => {
     return (
-        <div>Hello</div>
+        <li
+            className="task"
+        >
+            <span>{todo.data}</span>
+
+            <span>
+                <i className="fas fa-trash" />
+            </span>
+            <span>
+                <i className="fas fa-pen" />
+            </span>
+        </li>
     )
 }
 
